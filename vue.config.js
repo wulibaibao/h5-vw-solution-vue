@@ -1,12 +1,9 @@
 
-let targetUrl = 'http://cms-test.vlightv.com'; //'http://192.168.1.222',
-// let targetUrl = 'http://cms.vlightv.com'
-
 module.exports = {
     devServer : {
         proxy : {
             '/admin/' : {
-                target: targetUrl ,  
+                target: `http://www.baidu.com/` ,  
                 changeOrigin:true,
             },
         },
