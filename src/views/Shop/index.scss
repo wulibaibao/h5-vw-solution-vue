@@ -1,0 +1,164 @@
+@import '~@/assets/scss/common.scss';
+
+.vg-shop {
+    @include full-screen;
+    background: #1E1B2B;
+
+    .shop-main {
+        @include main-container;
+        .my {
+            @include w690-h180;
+            position: relative;
+            .line {
+                @include h-v-center;
+                width: 1px;height: 100px;
+                opacity: 0.2;
+                background: #FFFFFF;
+                border-radius: 24px;
+            }
+            .light-spot ,
+            .t-brightness {
+                width: calc( 100% / 2);
+                height: 100%;
+                position: relative;
+                padding: 44px 33px 0 39px;
+            }
+
+            .light-spot .light-icon,
+            .t-brightness .bright-icon{
+                width: 44px;
+                height: 50px;
+                margin-right: 10px;
+                margin-top: 3px;
+                float: left;
+            }
+
+            .light-spot .light-icon {
+                background: url('~@/assets/img/shop/light-spot.png') left center no-repeat;
+                background-size: 100% 100%;
+            }
+
+            .t-brightness .bright-icon {
+                background: url('~@/assets/img/shop/brightness.png') left center no-repeat;
+                background-size: 100% 100%;
+            }
+
+            .light-spot h3,
+            .t-brightness h3 {
+                float: left;
+                font-size: 46px;
+                color: #FFFFFF;
+            }
+
+            .light-spot .t-light,
+            .t-brightness .t-bright {
+                height: 56px;width: 100%;overflow: hidden;
+                margin-bottom: 10px;
+            }
+
+            .light-spot { 
+                float: left;
+            }
+            .t-brightness { 
+                float:right;
+            }
+
+            .light-spot .t-opt,
+            .t-brightness .t-opt {
+                width: 100%;height: 36px;line-height: 36px;
+                clear: both;
+                .t {font-size: 24px;
+                    color: #FFFFFF;float: left;}
+                .btn {
+                    width: 80px;height: 100%;
+                    background: rgba(255,255,255,.1);
+                    border-radius: 28px;
+                    font-size: 22px;
+                    text-align: center;
+                    float: right;
+                    color: #FFFFFF;
+                }
+            }
+
+        }
+        .pr-tab {
+            height: 88px;line-height: 88px;
+            font-size: 26px;
+            width: 100%;overflow: hidden;
+            color: #5D5E66;
+            li { 
+                float: left;width: 104px;position: relative;
+                height:100%;
+                .new {
+                    width:27px;height: 25px;
+                    background: url('~@/assets/img/shop/new.png') left center;
+                    background-size: 100% 100%;
+                    // display: none;
+                    position: absolute;right: 10px;top: 0;
+                }
+            }
+            .active {
+                font-size: 32px;
+                color: #FFFFFF;
+            }
+        }
+        .pr-card {
+            width: 100%;height: calc( 100% - 180px - 30px - 88px);
+            .swiper-container {
+                width: 100%;height: 100%;
+                overflow: hidden;
+                .swiper-slide {
+                    overflow-x :hidden;
+                    overflow-y: scroll;
+                    color: #fff;
+                }
+            }
+            .pr-item {
+                width: 100%;height: 120px;margin-bottom: 59px;
+                overflow: hidden;
+                position: relative;
+                .cov {
+                    float: left;
+                    width: 192px;height: 100%;
+                    border-radius: 16px;
+                    overflow: hidden;
+                    margin-right: 30px;
+                }
+                .intr {
+                    width: 328px;height: 100%;overflow: hidden;
+                    float: left;
+                    .t,
+                    .u,
+                    .p { width: 100%;}
+                    .t {
+                        font-size: 28px;
+                        color: #FFFFFF;
+                    }
+                    .u {
+                        font-size: 22px;
+                        color: #9F9FA3;
+                    }
+                    .p {
+                        font-size: 22px;
+                        color: #7C77E2;
+                    }
+                }
+                .btn {
+                    width: 140px;height: 64px;line-height: 64px;
+                    text-align: center;
+                    border-radius: 32px;
+                    font-size: 24px;
+                    float: right;
+                }
+                .btn-n {
+                    background-image: linear-gradient(134deg, #7C77E2 3%, #A16DD7 100%);
+                    color: #FFFFFF;
+                }
+                .btn-c {
+                    background: #2C2839;
+                    color: #5D5E66;
+                }
+            }
+        }
+    }
+}

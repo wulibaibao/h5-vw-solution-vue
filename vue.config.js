@@ -2,8 +2,8 @@
 module.exports = {
     devServer : {
         proxy : {
-            '/admin/' : {
-                target: `http://www.baidu.com/` ,  
+            '/h5/' : {
+                target: `http://api-dev.vlightv.com` ,  
                 changeOrigin:true,
             },
         },
@@ -17,7 +17,8 @@ module.exports = {
                 'vue' : 'Vue',
                 'vue-router' : 'VueRouter',
                 'vuex' : 'Vuex',
+                'better-scroll' : 'BScroll',
+                'axios' : 'axios',
             })
     }
 }
-

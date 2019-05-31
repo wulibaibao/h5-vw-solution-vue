@@ -1,0 +1,27 @@
+@import '~@/assets/scss/common.scss';
+
+.preview {
+    @include screen-cover;
+    .container {
+        position: absolute;
+        width: 600px;height: 641px;
+        left: 50%;top:50%;
+        transform: translate(-50%,-50%);
+        .top {
+            height: 376px;
+            width: 100%;
+        }
+        .bottom {
+            width: 100%;
+            height: 265px;
+            .t,
+            .i,
+            .btn { width : 100% ;}
+            .t {font-size: 32px;
+                color: #5D5E66;}
+            .i {font-size: 24px;
+                color: #9F9FA3;}
+            .btn {height: 88px;line-height: 88px;}
+        }
+    }
+}

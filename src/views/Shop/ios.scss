@@ -1,0 +1,107 @@
+@import '~@/assets/scss/common.scss';
+
+.ios-pay {
+    @include screen-cover;
+    .ios-container {
+        width: 100%;max-height: 980px;
+        @include c-background;overflow: hidden;
+        position: absolute;left: 0;bottom: 0;
+        .t {
+            @include c-nav-bar;
+            .close {
+                @include close-btn;
+            }
+        }
+
+        .i-pay {
+            width: 100%;//height:calc( 100% - 88px - 30px );
+            padding: 0 30px;
+            .i-select {
+                width: 100%;max-height: 718px;overflow:auto;
+                .i-select-item {
+                    padding-top: 15px;
+                    width: 100%;height: 64px;clear: both;position: relative;
+                    margin-bottom: 60px;
+                    .i-item-data {width: 100%;height:100%;text-align:left;
+                        .i-icon,
+                        .i-light-add,
+                        .i-light-count {
+                            float: left;
+                        }
+                        .i-icon {width: 46px;height: 100%;margin-left: 7px;
+                            background: url('~@/assets/img/shop/light-spot.png') left center no-repeat;
+                            background-size: 40px 46.4px ;margin-right: 12.6px;
+                        }
+                        .i-light-count {
+                            font-size: 56px;
+                            color: #5D5E66;font-weight: 900;
+                            height: 100%;line-height: 64px;
+                            margin-right: 10px;
+                        }
+                        .i-light-add {
+                            font-size: 24px;
+                            color: #5D5E66;height:100%;
+                            position: relative;width:175px;
+                            .add { height: 32px;
+                                position: absolute;left:0;
+                                clear: both;width:100%;top:-8px;
+                                .j{
+                                    width: 0;height: 0;border-color: transparent #7C77E2 #7C77E2 transparent;
+                                    border-width: 6px;border-style: solid;margin-top: 20px;float: left;
+                                }
+                                .f{
+                                    background-image: linear-gradient(134deg, #7C77E2 3%, #A16DD7 100%);
+                                    height: 32px;line-height: 22px;text-align: center;
+                                    padding: 5px 8px;
+                                    font-size: 22px;
+                                    color: #FFFFFF;border-radius: 8px 8px 8px 0;float: left;
+                                }
+                            }
+                            .word {
+                                font-size: 24px;
+                                color: #5D5E66;
+                                height: 100%;
+                                padding-top: 30px;
+                                span { color: #F5A623; margin-right: 3px;}
+                            }
+                        }
+
+                    }
+                    .i-item-btn {
+                        position: absolute;right: 0;bottom: 0;
+                        height: 100%;line-height: 64px;width: 160px;
+                        text-align: center;font-size: 26px;
+                        color: #FFFFFF;
+                        background-image: linear-gradient(134deg, #7C77E2 3%, #A16DD7 100%);
+                        border-radius: 32px;
+                    }
+                }
+            }
+    
+            .i-line {
+                height: 1px;background: #EEEEEE;
+            }
+            
+            .i-issue {
+                height: 143px;margin-top : 20px;
+                .i-agreen {
+                    width: 100%;
+                    display:flex;justify-content: flex-start;
+                align-items: center;
+                    .select-agreen-icon{
+                        width: 30px;height: 30px;margin-right: 10px;
+                    }
+                    span {
+                        font-size: 24px;
+                        color: #9F9FA3;margin-right: 10px;
+                    }
+                    .protocol {
+                        color: #7C77E2;
+                    }
+                }
+            }
+            .i-tip {font-size: 24px;
+                color: #9F9FA3;margin-top: 30px;}
+        }
+    }
+}

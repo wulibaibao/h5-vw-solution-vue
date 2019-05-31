@@ -1,0 +1,57 @@
+@mixin full-screen {
+    position: absolute;
+    left: 0;right: 0;
+    bottom: 0;top: 0;z-index: 3;
+}
+
+@mixin black-cover {
+    background: rgba(0,0,0,0.50);
+}
+
+@mixin screen-cover {
+    @include full-screen;
+    @include black-cover;
+}
+
+@mixin main-container {
+    padding :30px;
+    height: calc( 100% - 88px);
+}
+
+@mixin w690-h180 {
+    background-image: linear-gradient(134deg, #7C77E2 3%, #A16DD7 100%);
+    border-radius: 24px;
+    width: 100%;height: 180px;
+    margin-bottom: 30px;
+}
+
+@mixin h-v-center {
+    position: absolute;
+    left: 50%;top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+// 遮罩 nav close icon 
+@mixin close-btn {
+    width: 88px;height: 88px;
+    background: url('~@/assets/img/shop/x.png') center center no-repeat;
+    background-size: 25.5px 25.5px;
+    position: absolute;
+    right: 0;top: 0;
+}
+
+//遮罩 nav bar
+@mixin c-nav-bar {
+    width: 100%;height: 88px;line-height: 88px;
+    text-align: center;
+    position: relative;
+    font-size: 32px;
+    color: #5D5E66;margin-bottom : 30px;
+}
+
+//遮罩 nav background border radius
+
+@mixin c-background {
+    background: #FFFFFF;
+    border-radius: 24px 24px 0 0
+}

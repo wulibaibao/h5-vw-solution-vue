@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from './views/Home.vue'
 
 Vue.use(VueRouter)
 
@@ -9,17 +8,19 @@ export default new VueRouter({
     base: process.env.BASE_URL,
     routes: [
         {
-            path: '/',
-            name: 'home',
-            component: Home
-        },
-        {
-            path: '/about',
-            name: 'about',
+            path: '/shop',
+            name: 'shop',
+            meta : '微光商城',
             // route level code-splitting
             // this generates a separate chunk (about.[hash].js) for this route
             // which is lazy-loaded when the route is visited.
-            component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
+            component: () => import(/* webpackChunkName: "shop" */ './views/Shop/index.vue')
+        },
+        {
+            path : '/bright',
+            name : 'brightness',
+            meta : '我的亮度',
+            component : () => import(/* webpackChunkName: 'brightness' */'./views/Brightness/index.vue')
         }
     ]
 })
